@@ -1,10 +1,12 @@
 # DecryptChocoArgs
 
 ## Changelog
+
 | Version | Release Date    |    Description                           |
-|=========|=================|==========================================|
+|---------|-----------------|------------------------------------------|
 | v1.0	    |	12-17-2018	|	Initial release                        |
 | v1.0.1	|	12-17-2018	|	Add additional output text/formatting  |
+
 
 ## Summary
 Decrypt and display stored Chocolatey package argument files for reference/troubleshooting
