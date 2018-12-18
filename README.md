@@ -23,7 +23,7 @@ This was witnessed in cases of VLC and other apps erroneously installing 32bit v
 ## The Issue
 So, what's the real issue here?
 
-Chocolately stores each package's install arguments (assuming you have the useRememberedArgumentsForUpgrades enabled) inside `.argument` files in a subfolder titled for each package/version under the Chocolately root location in a separate hidden dir - usually `C:\ProgramData\chocolatey\.chocolatey`.
+Chocolately stores each package's install arguments (assuming you have the useRememberedArgumentsForUpgrades enabled) inside `.arguments` files in a subfolder titled for each package/version under the Chocolately root location in a separate hidden dir - usually `C:\ProgramData\chocolatey\.chocolatey`.
 
 A picture is worth 1000 words, so this better describes the issue.  I wondered why when upgrading my Git package I began seeing this in the logs:
 
@@ -154,6 +154,6 @@ See a pattern?  Do you see how as of `2.19.1` that the package CMAKE that had in
 The real issue is that as other packages args were WRONGLY added to ALL other packages argument files, THEY ARE NEVER REMOVED even once the bug is fixed.  In fact, v2 of this utility will most likely have to feature a conversion to allow editing and re-encryption as the only way to actually FIX this damage.
 
 ## Solution
-As stated this utility simply shows you what it already stored on your system inside chocolately package `.argument` files so you can properly troubleshoot the severe issues that come with incorrect args.
+As stated this utility simply shows you what it already stored on your system inside chocolately package `.arguments` files so you can properly troubleshoot the severe issues that come with incorrect args.
 
 As always (and as stated in the attached license) please remember this is simply for educational/reference purposes and use of this is at your own risk - but hopefully it can help others also in this situation with no other easy way (other than performing botched upgrades and reading the unencrypted logs) as Choco.exe provides no current method of providing this information as to what is actually stored in the argument files stored on our systems.
